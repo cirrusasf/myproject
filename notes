@@ -1,0 +1,77 @@
+cd /home/jiangzhu/projects/study/myproject
+
+mkdir mypackage
+
+cd mypackage
+
+vi __init__.py
+
+vi greet.py
+
+vi functions.py
+
+cd ../
+
+vi setup.py
+
+from setuptools import setup
+
+setup(
+        name='mypackage',
+        version='0.1',
+        description='A sample Python package',
+        author='Jiang Zhu',
+        author_email='jzhu4@alaska.edu.com',
+        packages=['mypackage']
+)
+
+
+# packing the package 
+
+python3 setup.py sdist bdist_wheel
+
+# install the package
+
+cd dist
+
+pip install mypackage-0.1-py3-none-any.whl
+
+# or you can do the following:
+
+pip install mypackage-0.1.tar.gz
+
+
+# check the path of the module
+
+import mypackage
+print(my_package2.__path__)
+
+
+# deploy you package to pypi
+
+register the pypi account
+
+cirrusak  xxxxxxxxxxxxx
+
+# install twine
+
+pip install twine
+
+# upload the source distribution on PyPi
+
+twine upload dist/*
+
+https://pypi.org/project/jz-asf-demo/0.1/
+
+# check the package
+
+pip install jz-asf-demo 
+
+
+# package name can not be "_", so change the package name to asfjzdemo
+
+it will be success!
+
+# uplaod the package to conda environment
+
+

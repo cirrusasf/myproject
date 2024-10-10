@@ -1,2 +1,1 @@
-# myproject
-A project including a small example package 
+This shows the process of packaging python package.
